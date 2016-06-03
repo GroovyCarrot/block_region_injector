@@ -1,0 +1,17 @@
+{
+  "name": "drupal/block_region_injector",
+  "description": "Overrides block page rendering layer to allow block regions to be injected into other templates.",
+  "type": "drupal-module",
+  "authors": [
+    {
+      "name": "Jake Wise",
+      "email": "wise.jake@live.co.uk",
+      "homepage": "https://github.com/GroovyCarrot",
+      "role": "Maintainer"
+    }
+  ],
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": { }
+}
+

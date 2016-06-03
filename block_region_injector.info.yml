@@ -1,0 +1,8 @@
+name: 'Block region template injector'
+type: module
+description: 'Overrides block page rendering layer to allow block regions to be injected into other templates.'
+package: Development
+version: 1.0
+core: 8.x
+dependencies:
+  - block

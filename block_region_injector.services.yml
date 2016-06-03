@@ -1,0 +1,6 @@
+services:
+  block.page_display_manager:
+    class: Drupal\block_region_injector\BlockPageDisplayManager
+    arguments:
+      - '@entity_type.manager'
+      - '@block.repository'

@@ -1,7 +1,13 @@
 <?php
 /**
  * @file
- * BlockPageDisplayVariantSubscriber implementation.
+ * block_region_injector
+ * BlockPageDisplayVariantSubscriber.php
+ *
+ * Created by Jake Wise 03/06/2016.
+ *
+ * You are permitted to use, modify, and distribute this file in accordance with
+ * the terms of the license agreement accompanying it.
  */
 
 namespace Drupal\block_region_injector\EventSubscriber;

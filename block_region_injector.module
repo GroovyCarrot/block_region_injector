@@ -14,7 +14,7 @@
  * Implements hook_preprocess().
  */
 function block_region_injector_preprocess(&$variables, $hook) {
-  if ($hook !== 'page') {
+  if ($hook !== 'page' && !isset($variables['blocks'])) {
     $variables['blocks'] = \Drupal::service('block.page_display_manager')->getBlockViewsByRegion();
   }
 }

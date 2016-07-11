@@ -1,14 +1,4 @@
 <?php
-/**
- * @file
- * block_region_injector
- * BlockPageVariant.php
- *
- * Created by Jake Wise 03/06/2016.
- *
- * You are permitted to use, modify, and distribute this file in accordance with
- * the terms of the license agreement accompanying it.
- */
 
 namespace Drupal\block_region_injector\Plugin\DisplayVariant;
 
@@ -21,7 +11,8 @@ use Drupal\Core\Display\VariantBase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Class BlockPageVariant
+ * Class BlockPageVariant.
+ *
  * @package Drupal\block_region_injector\Plugin\DisplayVariant
  *
  * A block page display variant, which uses a display manager service to store

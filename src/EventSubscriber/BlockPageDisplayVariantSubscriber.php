@@ -1,26 +1,18 @@
 <?php
-/**
- * @file
- * block_region_injector
- * BlockPageDisplayVariantSubscriber.php
- *
- * Created by Jake Wise 03/06/2016.
- *
- * You are permitted to use, modify, and distribute this file in accordance with
- * the terms of the license agreement accompanying it.
- */
 
 namespace Drupal\block_region_injector\EventSubscriber;
 
+use Drupal\block\EventSubscriber\BlockPageDisplayVariantSubscriber as OriginalBlockPageDisplayVariantSubscriber;
 use Drupal\Core\Render\PageDisplayVariantSelectionEvent;
 
 /**
- * Class BlockPageDisplayVariantSubscriber
- * @package Drupal\block_region_injector
+ * Class BlockPageDisplayVariantSubscriber.
  *
  * Selects the block page display variant.
+ *
+ * @package Drupal\block_region_injector
  */
-class BlockPageDisplayVariantSubscriber extends \Drupal\block\EventSubscriber\BlockPageDisplayVariantSubscriber {
+class BlockPageDisplayVariantSubscriber extends OriginalBlockPageDisplayVariantSubscriber {
 
   /**
    * {@inheritdoc}

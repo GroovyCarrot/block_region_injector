@@ -1,14 +1,4 @@
 <?php
-/**
- * @file
- * block_region_injector
- * BlockPageDisplayManager.php
- *
- * Created by Jake Wise 03/06/2016.
- *
- * You are permitted to use, modify, and distribute this file in accordance with
- * the terms of the license agreement accompanying it.
- */
 
 namespace Drupal\block_region_injector;
 
@@ -22,7 +12,8 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Entity\EntityViewBuilderInterface;
 
 /**
- * Class BlockPageDisplayManager
+ * Class BlockPageDisplayManager.
+ *
  * @package Drupal\block_region_injector
  */
 class BlockPageDisplayManager {
@@ -98,8 +89,7 @@ class BlockPageDisplayManager {
    * @param BlockRepositoryInterface $block_repository
    *   The block entity repository.
    */
-  public function __construct(EntityTypeManagerInterface $entity_type_manager,
-                              BlockRepositoryInterface $block_repository) {
+  public function __construct(EntityTypeManagerInterface $entity_type_manager, BlockRepositoryInterface $block_repository) {
     $this->blockViewBuilder = $entity_type_manager->getViewBuilder('block');
     $this->blockRepository = $block_repository;
     $this->blockListCacheTags = $entity_type_manager->getDefinition('block')->getListCacheTags();
@@ -111,6 +101,7 @@ class BlockPageDisplayManager {
    * Set the page title.
    *
    * @param string $title
+   *   The title of the page to set to the title block.
    */
   public function setTitle($title) {
     if ($this->titleBlock) {
@@ -123,6 +114,7 @@ class BlockPageDisplayManager {
    * Set the content of the main content block.
    *
    * @param array $main_content
+   *   The main content renderable array to set to the main content block.
    */
   public function setMainContent(array $main_content) {
     $this->mainContent = $main_content;
@@ -136,6 +128,7 @@ class BlockPageDisplayManager {
    * Build the full page display, with content and title.
    *
    * @return array
+   *   Renderable array.
    */
   public function buildFullPageDisplay() {
     // Track whether blocks showing the main content and messages are displayed.
@@ -220,6 +213,7 @@ class BlockPageDisplayManager {
    * Retrieve the list of regions containing block views.
    *
    * @return array
+   *   An array of renderable block views, keyed by their respective regions.
    */
   public function getBlockViewsByRegion() {
     return $this->blockViewCache;

@@ -5,4 +5,5 @@ package: Development
 version: 1.0
 core: 8.x
 dependencies:
-  - block
+  - drupal:block
+
